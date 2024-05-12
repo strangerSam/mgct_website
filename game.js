@@ -34,11 +34,10 @@ function cleanResponse(response) {
     return cleanedResponse;
 }
 
-// Fonction pour récupérer les données de la base de données via Mongoose
+// Fonction pour récupérer les données de la base de données JSON
 const fetchData = async () => {
     try {
-        // Envoyer une requête HTTP GET pour récupérer les données de la base de données
-        const response = await fetch('//necibsamir:NnChXFhVjzY78lZm@cluster0.i1d1jkk.mongodb.net/'); // Remplacez /votre-endpoint par l'URL appropriée
+        const response = await fetch('assets/json/moviedb.json');
         const data = await response.json();
         return data;
     } catch (error) {
