@@ -37,7 +37,7 @@ function cleanResponse(response) {
 // Fonction pour récupérer les données de la base de données JSON
 const fetchData = async () => {
     try {
-        const response = await fetch('assets/json/moviedb.json');
+        const response = await fetch('https://raw.githubusercontent.com/strangerSam/mgct_website/main/moviedb.json');
         const data = await response.json();
         return data;
     } catch (error) {
